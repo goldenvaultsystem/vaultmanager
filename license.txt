@@ -1,0 +1,41 @@
+                                                             User Agreement
+1. Product Purpose
+      Vault Manager adopts advanced public key encryption technology similar to modern e-commerce, providing public key encrypted vault file services. Used in conjunction with security keys, ordinary users can easily achieve the same level of data security as e-commerce.
+      Vault Manager is primarily used in the following three application scenarios:
+      1. Provides large-capacity hardware-encrypted vault files for local personal use. Security key hardware is required to access vault data. Users can create local personal-use hardware-encrypted secure storage container files;
+      2. Provides medium-capacity public key encrypted vault files for cloud storage. Security key hardware is required to access vault data. Users can securely store important data on the internet without worrying about leaks;
+      3. Provides small-capacity public key encrypted vault files for remote transmission, ensuring the confidentiality and integrity of important data during transmission. Users can securely send important data to their remote endpoints over the internet.
+
+2. User Responsibilities and Risk Assumption
+      Users agree to purchase the vault certificate for personal or internal company use only. They must not engage in illegal or unauthorized activities, including but not limited to identity fraud, illegal transmission of state secrets and classified documents, transmission of politically sensitive files, or transmission of unauthorized infringing content.
+      Users must not reverse-engineer, crack, tamper with, or otherwise damage the Vault Manager software.
+      If a security incident occurs due to user negligence, such as failing to change the default security key password, using a weak password, or having their security key stolen, the user bears full responsibility for any resulting consequences and liabilities.
+      Users should carefully read the Vault Manager software documentation, familiarize themselves with the operational procedures, and maintain good habits of regular data backups. It is recommended to prepare a second security key as a backup to significantly reduce the risk of data loss or corruption.
+
+3. Developer and Operator Responsibilities
+      The developer and operator commit to providing users with basic technical consultation related to the Vault Manager software and vault certificates. Users should carefully read the Vault Manager documentation and maintain regular data backups. The developer and operator are not responsible for service interruptions, data loss, data corruption, or any other losses caused by user errors, security key hardware failures, software technical issues, or force majeure factors.
+
+4. Privacy and Data Security
+      The vault certificate is for the purchaser's exclusive use for public key encryption vault files and must not be lent to others. The holder and contact information in the vault certificate are user-defined for their own identification purposes.
+      The Vault Manager developer and operator do not verify the authenticity of any vault certificate information. They are not responsible for any consequences arising from misplaced trust in such information.
+      The Vault Manager software does not collect, use, or store any user data during its use. Users can use it with confidence.
+
+5. Global Sales and Usage Restrictions
+      Sales and usage restrictions in Mainland China:
+      The Vault Manager China version is provided with a bilingual (Chinese and English) user interface. It is only available for enterprise clients for secondary customized development and must be managed and used internally within the company.
+
+      Sales and usage restrictions in other global regions:
+      The Vault Manager Non-China Global Version is provided with a bilingual (Chinese and English) user interface and supports individual users.
+      The sale and use of this software in other regions are subject to applicable export controls and encryption laws. Some countries may impose special requirements or restrictions on encryption technology usage and distribution. Users must ensure their purchase and use comply with local laws and regulations.
+
+6. License Validity and Responsibility
+      The software license is only valid in countries/regions where it complies with local regulations. If local laws prohibit the use of this software, or if the user violates regional restrictions, the license will be immediately revoked, and the user will bear all legal liabilities arising from such violations.
+      Users must ensure that their use of the software complies with legal requirements and take responsibility for local compliance and legal obligations.
+
+7. Modifications and Termination
+      The developer and operator reserve the right to modify or terminate sales and usage licenses in specific regions at any time due to international legal changes, regional policy adjustments, or government requirements. If a user violates regional usage restrictions outlined in this agreement, the developer and operator have the right to immediately revoke the license and take appropriate legal action.
+      The developer and operator reserve the right to terminate a user's access to Vault Manager and vault certificate services under specific circumstances, such as user disagreement with the agreement, vault certificate expiration, or user misconduct.
+      By using this software, you are deemed to have read and agreed to be bound by the terms of this agreement. The developer and operator have the right to modify the terms of this agreement when necessary. You can review the relevant terms of the agreement in the latest version of this software. If you continue to use this software after the terms of this agreement are changed, it will be deemed that you accept the modified agreement. If you do not accept the modified agreement, you should stop using this software.
+
+					Vault Manager Developer and Operator
+							November 3, 2024

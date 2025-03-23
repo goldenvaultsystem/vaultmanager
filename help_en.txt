@@ -1,0 +1,93 @@
+                                          Vault Manager Help Document
+
+1. Purpose of Vault Manager
+    Vault Manager adopts advanced public key encryption technology similar to modern e-commerce, providing public key encrypted vault file services. Used in conjunction with security keys, ordinary users can easily achieve the same level of data security as e-commerce.
+
+    Vault Manager is primarily used in the following three application scenarios:
+    1. Provides large-capacity hardware-encrypted vault files for local personal use. Security key hardware is required to access vault data. Users can create local personal-use hardware-encrypted secure storage container files;
+    2. Provides medium-capacity public key encrypted vault files for cloud storage. Security key hardware is required to access vault data. Users can securely store important data on the internet without worrying about leaks;
+    3. Provides small-capacity public key encrypted vault files for remote transmission, ensuring the confidentiality and integrity of important data during transmission. Users can securely send important data to their remote endpoints over the internet.
+
+2. Vault Manager and Security Key Protection
+    Vault Manager provides three layers of security protection:
+    1. Vault Manager automatically filters out unverified vault certificates that do not meet security standards, preventing the use of forged or unauthorized certificates.
+    2. Requires administrator privileges to run, preventing unauthorized use.
+    3. For vault files used for internet transmission and cloud storage, it is recommended not to add an additional recovery password option. Only the corresponding security key can decrypt and access the data. For local personal-use hardware-encrypted secure storage vault files,it is recommended to add a recovery password option for emergency backup purposes.
+
+    The security key serves as the authentication key for the vault system, offering five layers of private key protection:
+    1. The security key stores a pair of key pairs: the vault certificate (public key) and private key. The vault certificate (public key) uses up to 2048-bit encryption, making it computationally infeasible to derive the private key.
+    2. The private key is written to the security key once and cannot be retrieved thereafter, eliminating the risk of key theft.
+    3. To use the security key, users must enter a PIN code and physically touch the key for secondary confirmation, preventing automated brute-force attacks by unauthorized personnel or malware.
+    4. Three consecutive incorrect PIN attempts will lock the security key. Three consecutive incorrect PUK attempts will lock the reset function, requiring a manual reset, which restores the key to factory settings and erases all data.
+    5. The key pair stored in the security key is non-clonable. If the key is damaged and no backup key exists, previously encrypted vault files cannot be decrypted.
+
+3. Vault Manager System Requirements
+    Operating System: Supports all versions of Windows 10 and Windows 11 in both Simplified Chinese and English languages (the Home edition does not support creating new vault files).
+    Administrator Privileges: The software must be run with administrator rights.
+    Other Required Software: yubico-piv-tool. Users must download and install yubico-piv-tool from Yubico's official website: https://developers.yubico.com/yubico-piv-tool/Releases/.
+
+4. Vault Manager Usage Process
+    **For Individual Users:**
+    1. Purchase and prepare a security key in advance. Supported hardware includes Canokey and Yubikey.
+    2. Obtain a free 7-day test vault certificate or a paid long-term official vault certificate from the Vault Manager developer and operator.
+    3. Use Vault Manager to write the vault certificate and private key into the security key.
+    4. Use Vault Manager and the security key to create personal vault files and store important data inside them. This ensures hardware public key encryption for data security.
+    5. Depending on the usage purpose, store the vault file locally, in the cloud, or transmit it securely to a remote endpoint.
+    6. To access vault files, use Vault Manager and the security key. Enter the security key PIN and physically touch the key to open and access the encrypted data.
+
+    **For Enterprise Users:**
+    1. The company must purchase security key hardware in advance (Canokey and Yubikey are supported).
+    2. The company contacts the Vault Manager developer and operator for customized development, internal self-certification center certificates, and internal certificate issuance tools.
+    3. The company uses the internal certificate issuance tool to generate vault certificates for specific employees, writes them to the security key, and then distributes them to designated users.
+    4. Company users use Vault Manager and the security key to create vault files and store important data, ensuring hardware-based public key encryption.
+    5. Depending on the usage purpose, store the vault file locally, in the cloud, or transmit it securely to a remote endpoint.
+    6. To access vault files, use Vault Manager and the security key. Enter the security key PIN and physically touch the key to open and access the encrypted data.
+
+5. Vault Manager Versions and Features
+    Vault Manager has two versions: China Version and Non-China Global Version.
+    
+    Non-China Global Version: Features a bilingual (Chinese/English) user interface, available only for personal users outside of China, and includes all functionalities. Its usage is subject to export control and encryption regulations in different countries. Users must ensure compliance with local laws and regulations. If local laws prohibit the use of this software, or the user violates regional restrictions, the license will be immediately revoked, and the user will bear all resulting legal responsibilities.
+
+    **China Version**: Features a bilingual (Chinese/English) user interface, available only for company clients in China, supporting secondary customized development for internal enterprise use.
+
+    Important: Administrator privileges are required when using Vault Manager functions. If the current user is not an administrator, they must provide an administrator account and password to run the application. If the current user is added to the system administrator group, they will no longer need to enter the administrator account and password in the future.
+
+1). Create Personal Vault File Function
+    Encrypt vault files using the vault certificate in the user's security key. These files can only be decrypted and opened using the same security key. Users can create large-capacity, hardware-encrypted secure files for personal local use, medium-capacity secure files for cloud storage, or small-capacity secure files for secure internet transmission to their remote endpoint. Windows 10 and Windows 11 Home editions do not support the creation of new vault files, but other versions of Windows 10 and Windows 11 do.
+
+2). Load/Unload Vault File Function
+    The load/unload vault file function is used to decrypt and access vault files. When a vault file is double-clicked, if it has not been loaded before, Vault Manager will load it as a system virtual disk, allowing users to decrypt and access critical data using their security key. If the file has already been loaded, Vault Manager will unload and close the corresponding system virtual disk.
+
+3). Write Vault Certificate to Security Key Function
+    In the certificate writing interface, the selected new key pair (including the vault certificate and private key) is written into the selected security key slot. Once updated, the user can use the new vault certificate.
+
+4). Self-Certification Center Management Function (Available in China Version Only)
+    If the user's security key is issued and authorized by the company's internal self-certification center, they must add the company's internal self-certification center certificate to Vault Manager. Otherwise, the certificate stored in the security key will not be recognized or read by Vault Manager.
+
+5). View Security Key Vault Certificate Function
+    In the Vault Certificate Manager, users can view a summary of the selected security key's vault certificate, including the vault ID, issuer name, issuer ID, issuer contact information, certificate holder, holder contact details, and expiration date. The holder and contact information in the vault certificate are user-defined for personal identification purposes. Vault Manager developers and operators do not authenticate the accuracy of any vault certificate information and are not responsible for it.
+
+6). Change Security Key PIN Function
+    To change the security key PIN, users must enter the old PIN and then input the new PIN twice. Three consecutive incorrect PIN attempts will lock the security key and make it unusable.
+
+7). Change Security Key PUK Function
+    To change the security key PUK, users must enter the old PUK and then input the new PUK twice. Three consecutive incorrect PUK attempts will lock the PUK function, making it unusable. The user must manually reset the security key, which will restore it to factory settings and erase all stored data.
+
+8). Reset Security Key PIN Function
+    Users can directly set a new security key PIN by entering the PUK and inputting the new PIN twice. Three consecutive incorrect PUK attempts will lock the PUK function, making it unusable. The user must manually reset the security key, which will restore it to factory settings and erase all stored data.
+
+6. Security Key Management and Storage
+    Users are fully responsible for managing and storing their security keys, including loss, damage, or theft.
+    Private keys should not be stored on internet-connected devices. Instead, they should be securely stored offline, such as on a fully offline USB device kept in a safe, only accessed when updating the key.
+    Users should not lend their security keys to others. It is recommended to change the default PIN and PUK codes immediately, set a strong password, and avoid exposing the password in public places.
+    Three consecutive incorrect PIN attempts will lock the security key. Users can reset the PIN within Vault Manager.
+    **Important**: If the user enters the wrong PUK code three times, the security key must be manually reset, restoring it to factory settings and erasing all data.
+
+    Emergency Handling for Lost or Stolen Security Key:
+    Users should stop using previous vault files and use a backup security key to transfer important data from the vault file to a secure location. The backup security key should no longer be used to create new vault files.
+    Users should contact the Vault Manager developer and operator to update the security key and obtain a new key pair (including a vault certificate). The new key pair should be written into the security key. Once the update is complete, users can use the new vault certificate.
+
+7. Privacy and Data Security
+    Vault certificates are for the purchaser's personal use only and must not be lent to others. The holder and contact information in the certificate are user-defined for self-identification purposes.
+    The Vault Manager developer and operator do not authenticate the accuracy of certificate information and are not responsible for any consequences arising from misinterpretation.
+    Vault Manager software does not collect, use, or store user data. Users can use it with confidence.
