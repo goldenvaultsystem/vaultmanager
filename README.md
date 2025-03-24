@@ -12,5 +12,6 @@
 &emsp;&emsp;&nbsp;Stage of Using Vault Files: <br>
 &emsp;&emsp;&nbsp;6.  When using the vault file, insert the key, enter the PIN code, and perform a secondary physical touch to open and use the important data in the vault file. <br>
 <br>
-&emsp;&emsp;For free trial certificates, purchasing formal certificates, technical consultations, or custom development for corporate clients<br>
+&emsp;&emsp;7-day Free Trial Vault Certificate & Private Key: https://github.com/goldenvaultsystem/VaultManager/tree/main/Free_trial_key_pair/<br>
+&emsp;&emsp;Purchasing formal certificates, technical consultations, or custom development for corporate clients<br>
 &emsp;&emsp;Contact Information:  GoldenVaultSystem@gmail.com
